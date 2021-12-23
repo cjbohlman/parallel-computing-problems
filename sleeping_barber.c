@@ -1,7 +1,7 @@
 // classic inter-proces communication and synchronization problem
 #include "sleeping_barber.h"
 
-#define CUSTOMERS 10
+#define CUSTOMERS 20
 
 #include <stdio.h>
 #include <pthread.h>
@@ -72,7 +72,7 @@ void sig_handler(int signum){
 int main(void) {
 	signal(SIGINT,sig_handler); // Register signal handler
 
-	availableWRSeats = 1;
+	availableWRSeats = 3;
 	sem_init(&customerReady, 0, 0);
 	sem_init(&barberReady, 0, 0);
 	sem_init(&accessWRSeats, 0, 1);
