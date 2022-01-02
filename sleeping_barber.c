@@ -1,5 +1,4 @@
 // classic inter-proces communication and synchronization problem
-#include "sleeping_barber.h"
 
 #define CUSTOMERS 20
 
